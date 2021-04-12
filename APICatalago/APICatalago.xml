@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APICatalago</name>
+    </assembly>
+    <members>
+        <member name="M:APICatalago.Controllers.AutorizaController.RegisterUser(APICatalago.DTOs.UsuarioDTO)">
+            <summary>
+            Registra um novo usuário
+            </summary>
+            <param name="model">Um objeto UsuarioDTO</param>
+            <returns>Status 200 e o token para o cliente</returns>
+        </member>
+        <member name="M:APICatalago.Controllers.AutorizaController.Login(APICatalago.DTOs.UsuarioDTO)">
+            <summary>
+            Verifica as credencias de um usuário
+            </summary>
+            <param name="userInfo">Um objeto do tipo UsuarioDTO</param>
+            <returns>Status 200 e o token para o cliente</returns>
+            <remarks>Retornar o status 200 e o token para novo </remarks>
+        </member>
+        <member name="M:APICatalago.Controllers.CategoriasController.Get(System.Int32)">
+            <summary>
+            Obtem uma Categoria pelo seu Id
+            </summary>
+            <param name="id"></param>
+            <returns>Objetos Categoria</returns>
+        </member>
+        <member name="M:APICatalago.Controllers.CategoriasController.Post(APICatalago.Repository.DTOs.CategoriaDTO)">
+            <summary>
+            Incluiu uma nova categoria
+            </summary>
+            <remarks>
+            Exemplo de request:
+            
+                Post api/categoria
+                {
+                    "categoriaId": 1,
+                    "nome": "categoria1",
+                    "imagemUrl": "http://teste.net/1.jpg"
+                }
+            </remarks>
+            <param name="categoriaDto">Objeto Categoria</param>
+            <returns>O objeto Categoria Incluida</returns>
+            <remarks>Retorna o objeto </remarks>
+        </member>
+        <member name="M:APICatalago.Controllers.ProdutosController.Get(APICatalago.Pagination.ProdutosParameters)">
+            <summary>
+            Exibe uma relação dos produtos
+            </summary>
+            <param name="produtosParameters"></param>
+            <returns>Retonar uma lista de objetos Produto</returns>
+        </member>
+        <member name="M:APICatalago.Controllers.ProdutosController.Get(System.Int32)">
+            <summary>
+            Obtem um produto pelo seu identificador produtoId
+            </summary>
+            <param name="id">Código do produto</param>
+            <returns>Um objeto produto</returns>
+        </member>
+    </members>
+</doc>
